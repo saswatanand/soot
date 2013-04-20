@@ -270,5 +270,11 @@ public class DexClass {
         return this.types;
     }
 
+	/**
+	 * @return all annotations in this class
+	 */
+    public AnnotationDirectoryItem getAnnotations() {
+        return this.annotations;
+    }
 
 }

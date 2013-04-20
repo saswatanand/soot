@@ -85,6 +85,9 @@ public class DexResolver {
             sc.addMethod(m.toSoot());
         }
 
+        //annotations                                                                                                                                                                                              
+		AnnotationProcessor.process(c, sc, wrapper);
+
         return deps;
     }
 
