@@ -173,12 +173,11 @@ class AnnotationProcessor
 			String innerSig = c.getType().getTypeDescriptor();
 			innerSig = innerSig.substring(1, innerSig.length()-1);
 			sc.addTag(new InnerClassTag(innerSig, enclosingClassName, className, modifier));
-			if(encloseMethTag != null){
-				assert enclosingClassName == null;
-				sc.addTag(encloseMethTag);
-			}
-		} else
-			assert encloseMethTag == null;
+		} 
+		if(encloseMethTag != null){
+			assert enclosingClassName == null;
+			sc.addTag(encloseMethTag);
+		}
 	} 
 	
 	private static int getModifierOfInnerClass(ClassDefItem cDefItem)
